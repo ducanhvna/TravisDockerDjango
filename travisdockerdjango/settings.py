@@ -77,7 +77,7 @@ if os.getenv('TRAVIS', None):
     TEMPLATE_DEBUG = True
     DATABASES = {
         'default':{
-            'ENGINE': 'django.db.backeds.mysql',
+            'ENGINE': 'django.db.backends.mysql',
             'NAME': 'travis_ci_db',
             'USER': 'travis',
             'PASSWORD': '',
