@@ -9,14 +9,14 @@ env:
     - PYTHONPATH = "/home/travis/build/travisdockerdjango/travisdockerdjango"
     - PIP_USE_MIRRORS = true
   matrix:
-    - DJANGO=2.0.13 DB = mysql
+    - DJANGO=2.0.13 DB=mysql
   
 #command to install dependen
 install:
   - pip install -q -r requirements.txt
   
 before_script:
-  - mysql - e 'create database travis_ci_db;'
+  - mysql -e 'create database travis_ci_db;'
   - python manage.py makemigrations
   - python manage.py migrate
   
